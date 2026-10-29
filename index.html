@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CM SOLUTION | Máquinas CNC, Centros de Usinagem e Consultoria</title>
+  <meta name="description" content="CM SOLUTION: tornos CNC, centros de usinagem e tornos mecânicos, com consultoria de processos, programação CNC e treinamento de equipes. Atendimento em todo o Brasil.">
+  <meta name="theme-color" content="#0B0F14">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="CM SOLUTION | Máquinas CNC e engenharia de usinagem">
+  <meta property="og:description" content="Tornos CNC, centros de usinagem, consultoria de processos e treinamento para a sua fábrica.">
+  <meta property="og:image" content="assets/img/brand/og-image.jpg">
+
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/brand/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CM SOLUTION",
+    "description": "Máquinas CNC, consultoria de processos e treinamento em usinagem.",
+    "email": "prof.carllosmelo@gmail.com",
+    "telephone": "+55 11 95844-6116",
+    "areaServed": "BR"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Ícones (sprite SVG) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+      <symbol id="i-chevron-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+      <symbol id="i-chevron-up" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+      <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></symbol>
+      <symbol id="i-trend-down" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- Barra de contato -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__tag"><svg class="icon"><use href="#i-pin"/></svg> Atendimento em todo o Brasil</p>
+      <div class="topbar__links">
+        <a href="tel:+5511958446116"><svg class="icon"><use href="#i-phone"/></svg> (11) 95844-6116</a>
+        <a href="https://wa.me/5511943619085" target="_blank" rel="noopener"><svg class="icon"><use href="#i-chat"/></svg> (11) 94361-9085</a>
+        <a href="mailto:prof.carllosmelo@gmail.com" class="topbar__mail"><svg class="icon"><use href="#i-mail"/></svg> prof.carllosmelo@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand" aria-label="CM SOLUTION — início">
+        <img src="assets/img/brand/logo-cm.png" alt="" class="brand__mark" width="42" height="49">
+        <span class="brand__text">
+          <span class="brand__name"><b>CM</b> SOLUTION</span>
+          <span class="brand__sub">Soluções CNC</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#maquinas" class="nav__link">Máquinas</a>
+        <a href="#servicos" class="nav__link">Serviços</a>
+        <a href="#simulador" class="nav__link">Simulador</a>
+        <a href="#empresa" class="nav__link">Sobre</a>
+        <a href="#faq" class="nav__link">Dúvidas</a>
+        <a href="#contato" class="nav__link">Contato</a>
+        <a href="#contato" class="btn btn--primary nav__cta">Solicitar cotação</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <svg class="icon icon--lg burger__open"><use href="#i-menu"/></svg>
+        <svg class="icon icon--lg burger__close"><use href="#i-x"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow eyebrow--light">Máquinas CNC · Consultoria · Treinamento</p>
+          <h1 class="hero__title">Usinagem de alta precisão começa na <span>máquina certa.</span></h1>
+          <p class="hero__lead">
+            Fornecemos tornos CNC, centros de usinagem e tornos mecânicos das marcas Feeler, Euron e Quazar,
+            e acompanhamos você do dimensionamento ao setup, à programação e ao treinamento da equipe.
+          </p>
+          <div class="hero__actions">
+            <a href="#maquinas" class="btn btn--primary btn--lg">Ver máquinas <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+            <button class="btn btn--ghost btn--lg" data-whatsapp="Olá, Carlos! Gostaria de uma consultoria para a minha usinagem.">
+              <svg class="icon"><use href="#i-chat"/></svg> Falar no WhatsApp
+            </button>
+          </div>
+          <ul class="hero__proof">
+            <li><svg class="icon"><use href="#i-check"/></svg> Parceria técnica Simcomaq</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> Dimensionamento por aplicação</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> Treinamento in-company</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <figure class="showcase" data-open="vmx1020" tabindex="0" role="button" aria-label="Ver ficha técnica do VMX 1020">
+            <span class="showcase__tag">Destaque</span>
+            <img src="assets/img/machines/vmx1020.webp" alt="Centro de usinagem vertical VMX 1020" width="900" height="900" fetchpriority="high">
+            <figcaption class="showcase__caption">
+              <div>
+                <strong>Centro de Usinagem VMX 1020</strong>
+                <span>Vertical · BT40 · Comando Fanuc</span>
+              </div>
+              <dl class="showcase__specs">
+                <div><dt>Curso X</dt><dd>1.020 mm</dd></div>
+                <div><dt>Spindle</dt><dd>10.000 rpm</dd></div>
+                <div><dt>Magazine</dt><dd>24 ferr.</dd></div>
+              </dl>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="facts" aria-label="Diferenciais">
+      <div class="container">
+        <ul class="facts__grid">
+          <li><strong>+30 anos</strong><span>de chão de fábrica, programação e ensino de usinagem</span></li>
+          <li><strong>Sob medida</strong><span>máquina dimensionada para as suas peças e materiais</span></li>
+          <li><strong>360°</strong><span>da especificação à entrega técnica e ao pós-venda</span></li>
+          <li><strong>Brasil todo</strong><span>atendimento remoto e visitas técnicas sob agendamento</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- LINHAS -->
+    <section class="section section--light" id="linhas">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Linhas de equipamentos</p>
+          <h2 class="h2">Do torno mecânico ao <span>5 eixos</span></h2>
+          <p class="lead">Escolha a linha e veja os modelos disponíveis. Se não souber qual atende melhor, a gente ajuda a definir.</p>
+        </header>
+
+        <div class="lines">
+          <button class="line" data-line="centros">
+            <img src="assets/img/services/centros-usinagem.webp" alt="" loading="lazy">
+            <span class="line__body">
+              <span class="line__count" data-count="centros"></span>
+              <strong>Centros de usinagem</strong>
+              <span class="line__more">Ver modelos <svg class="icon"><use href="#i-arrow-right"/></svg></span>
+            </span>
+          </button>
+          <button class="line" data-line="tornos-cnc">
+            <img src="assets/img/services/tornos-cnc.webp" alt="" loading="lazy">
+            <span class="line__body">
+              <span class="line__count" data-count="tornos-cnc"></span>
+              <strong>Tornos CNC</strong>
+              <span class="line__more">Ver modelos <svg class="icon"><use href="#i-arrow-right"/></svg></span>
+            </span>
+          </button>
+          <button class="line" data-line="tornos-conv">
+            <img src="assets/img/services/tornos-convencionais.webp" alt="" loading="lazy">
+            <span class="line__body">
+              <span class="line__count" data-count="tornos-conv"></span>
+              <strong>Tornos convencionais</strong>
+              <span class="line__more">Ver modelos <svg class="icon"><use href="#i-arrow-right"/></svg></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="section section--white" id="maquinas">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">Catálogo</p>
+            <h2 class="h2">Máquinas em <span>destaque</span></h2>
+          </div>
+          <p class="lead">Fichas técnicas completas e cotação direta. Todas as configurações de comando e acessórios podem ser especificadas sob consulta.</p>
+        </header>
+
+        <div class="toolbar">
+          <div class="chips" id="filters" role="group" aria-label="Filtrar por categoria">
+            <button class="chip is-active" data-filter="todos" aria-pressed="true">Todas</button>
+            <button class="chip" data-filter="centros" aria-pressed="false">Centros de usinagem</button>
+            <button class="chip" data-filter="tornos-cnc" aria-pressed="false">Tornos CNC</button>
+            <button class="chip" data-filter="tornos-conv" aria-pressed="false">Convencionais</button>
+            <button class="chip" data-filter="5eixos-portal" aria-pressed="false">5 eixos e portal</button>
+          </div>
+          <label class="search">
+            <svg class="icon"><use href="#i-search"/></svg>
+            <span class="sr-only">Buscar máquina</span>
+            <input type="search" id="search" placeholder="Buscar modelo ou comando" autocomplete="off">
+          </label>
+        </div>
+
+        <p class="result-count" id="resultCount" aria-live="polite"></p>
+        <div class="grid" id="grid"></div>
+
+        <div class="empty" id="empty" hidden>
+          <strong>Nenhum equipamento encontrado.</strong>
+          <p>Tente outro termo ou fale com a gente: encontramos o modelo ideal para a sua necessidade.</p>
+          <button class="btn btn--primary" data-whatsapp="Olá! Não encontrei o equipamento que procuro no site. Podem me ajudar?">Falar com um especialista</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section section--dark" id="servicos">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow eyebrow--light">Engenharia de fabricação</p>
+            <h2 class="h2">Serviços que colocam a máquina para <span>produzir mais</span></h2>
+          </div>
+          <p class="lead">Não entregamos só equipamento: levamos o conhecimento necessário para que ele trabalhe no seu melhor desempenho desde o primeiro dia.</p>
+        </header>
+
+        <div class="services">
+          <article class="service">
+            <div class="service__media"><img src="assets/img/services/treinamento-processos.webp" alt="Medição de peça durante o processo de usinagem" loading="lazy"></div>
+            <div class="service__body">
+              <span class="service__icon"><svg class="icon icon--lg"><use href="#i-settings"/></svg></span>
+              <h3>Consultoria de processos</h3>
+              <p>Diagnóstico no chão de fábrica: parâmetros de corte, tempos passivos, fixação e balanceamento para reduzir o custo por peça.</p>
+              <ul class="ticks">
+                <li>Redução do tempo de ciclo</li>
+                <li>Mais vida útil do ferramental</li>
+                <li>Menos refugo em tolerâncias críticas</li>
+              </ul>
+              <button class="link-btn" data-quote="Consultoria de processos industriais">Solicitar diagnóstico <svg class="icon"><use href="#i-arrow-up-right"/></svg></button>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="assets/img/services/tornos-cnc.webp" alt="Placa e ferramenta de um torno CNC em operação" loading="lazy"></div>
+            <div class="service__body">
+              <span class="service__icon"><svg class="icon icon--lg"><use href="#i-code"/></svg></span>
+              <h3>Programação CNC e mentoria</h3>
+              <p>Programação ISO, ciclos fixos, macros e estratégias CAD/CAM para tornos e centros de usinagem.</p>
+              <ul class="ticks">
+                <li>Fanuc, Siemens, Heidenhain e GSK</li>
+                <li>Programas limpos e eficientes</li>
+                <li>Mentoria para programadores e preparadores</li>
+              </ul>
+              <button class="link-btn" data-quote="Mentoria em programação CNC">Conhecer a mentoria <svg class="icon"><use href="#i-arrow-up-right"/></svg></button>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="assets/img/services/centros-usinagem.webp" alt="Spindle de um centro de usinagem usinando uma peça" loading="lazy"></div>
+            <div class="service__body">
+              <span class="service__icon"><svg class="icon icon--lg"><use href="#i-users"/></svg></span>
+              <h3>Treinamento de equipes</h3>
+              <p>Capacitação prática com quem conhece a rotina de fábrica: operação segura, correções dimensionais e setup rápido.</p>
+              <ul class="ticks">
+                <li>Metodologia prática e direta</li>
+                <li>Formação de operadores autônomos</li>
+                <li>In-company ou formato híbrido</li>
+              </ul>
+              <button class="link-btn" data-quote="Treinamento de equipe operacional">Consultar treinamentos <svg class="icon"><use href="#i-arrow-up-right"/></svg></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="section section--light" id="processo">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Como trabalhamos</p>
+          <h2 class="h2">Da primeira conversa à <span>primeira peça</span></h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__n">01</span>
+            <h3>Diagnóstico</h3>
+            <p>Entendemos suas peças, materiais, tolerâncias e volume de produção.</p>
+          </li>
+          <li class="step">
+            <span class="step__n">02</span>
+            <h3>Especificação</h3>
+            <p>Definimos modelo, comando, cone, refrigeração e acessórios ideais.</p>
+          </li>
+          <li class="step">
+            <span class="step__n">03</span>
+            <h3>Condição comercial</h3>
+            <p>Proposta sob medida, com apoio em Finame, BNDES e financiamentos.</p>
+          </li>
+          <li class="step">
+            <span class="step__n">04</span>
+            <h3>Entrega técnica</h3>
+            <p>Instalação, nivelamento, treinamento e usinagem da primeira peça.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SIMULADOR -->
+    <section class="section section--white" id="simulador">
+      <div class="container">
+        <div class="sim">
+          <div class="sim__controls">
+            <p class="eyebrow">Simulador</p>
+            <h2 class="h2">Quanto uma usinagem otimizada <span>libera de produção?</span></h2>
+            <p class="lead">Ajuste os valores e veja o impacto estimado de reduzir o tempo de ciclo.</p>
+
+            <div class="field-range">
+              <div class="field-range__label"><label for="calcShifts">Turnos por dia</label><output id="calcShiftsVal"></output></div>
+              <input type="range" id="calcShifts" min="1" max="3" step="1" value="2">
+            </div>
+            <div class="field-range">
+              <div class="field-range__label"><label for="calcParts">Peças produzidas por mês</label><output id="calcPartsVal"></output></div>
+              <input type="range" id="calcParts" min="200" max="15000" step="100" value="2500">
+            </div>
+            <div class="field-range">
+              <div class="field-range__label"><label for="calcCycle">Tempo de ciclo atual</label><output id="calcCycleVal"></output></div>
+              <input type="range" id="calcCycle" min="1" max="60" step="0.5" value="8">
+            </div>
+            <div class="field-range">
+              <div class="field-range__label"><label for="calcOptim">Redução de ciclo esperada</label><output id="calcOptimVal"></output></div>
+              <input type="range" id="calcOptim" min="10" max="50" step="5" value="30">
+            </div>
+          </div>
+
+          <aside class="sim__result" aria-live="polite">
+            <p class="sim__kicker"><svg class="icon"><use href="#i-trend-down"/></svg> Impacto estimado por mês</p>
+            <p class="sim__big"><span id="resHours">100</span><small>horas de máquina liberadas</small></p>
+            <dl class="sim__metrics">
+              <div><dt>Capacidade extra</dt><dd id="resExtraParts">+1.071 peças</dd></div>
+              <div><dt>Dias de máquina livres</dt><dd id="resDays">6 dias</dd></div>
+            </dl>
+            <button class="btn btn--primary btn--block" data-quote="Simulador de produtividade">Quero otimizar minha produção <svg class="icon"><use href="#i-arrow-up-right"/></svg></button>
+            <p class="sim__note">Simulação ilustrativa. O ganho real depende da peça, do material e do processo atual.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section section--dark" id="empresa">
+      <div class="container about">
+        <div class="about__visual">
+          <div class="about__logo">
+            <img src="assets/img/brand/logo-cm-solution.jpg" alt="Logotipo CM SOLUTION" loading="lazy">
+          </div>
+        </div>
+
+        <div class="about__copy">
+          <p class="eyebrow eyebrow--light">Sobre a CM SOLUTION</p>
+          <h2 class="h2">Mais do que vender máquinas: <span>apoiar a evolução da sua indústria</span></h2>
+          <p>Comprar uma máquina sem a consultoria correta gera gargalos e custos desnecessários. A <strong>CM SOLUTION</strong> nasceu para mudar isso.</p>
+          <p>Liderada pelo <strong>Prof. Carlos Melo</strong>, une décadas de experiência em chão de fábrica ao fornecimento de soluções de usinagem e ferramentaria: da análise de qual modelo atende o seu portfólio de peças até a entrega técnica, a programação e o treinamento dos operadores.</p>
+
+          <ul class="pillars">
+            <li>
+              <svg class="icon icon--lg"><use href="#i-shield"/></svg>
+              <div><strong>Equipamentos de marcas consagradas</strong><span>Comandos Fanuc, Siemens, Heidenhain e GSK.</span></div>
+            </li>
+            <li>
+              <svg class="icon icon--lg"><use href="#i-gauge"/></svg>
+              <div><strong>Condições comerciais flexíveis</strong><span>Apoio com Finame, BNDES e financiamentos bancários.</span></div>
+            </li>
+            <li>
+              <svg class="icon icon--lg"><use href="#i-target"/></svg>
+              <div><strong>Atendimento direto com o especialista</strong><span>Você fala com quem entende de usinagem.</span></div>
+            </li>
+          </ul>
+
+          <button class="btn btn--primary btn--lg" data-whatsapp="Olá, Carlos! Gostaria de agendar uma conversa sobre novos equipamentos.">Agendar conversa <svg class="icon"><use href="#i-arrow-up-right"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--light" id="faq">
+      <div class="container container--narrow">
+        <header class="section-head section-head--center">
+          <p class="eyebrow">Dúvidas frequentes</p>
+          <h2 class="h2">Perguntas comuns sobre <span>nossos equipamentos</span></h2>
+        </header>
+
+        <div class="faq" id="faqList">
+          <div class="faq__item">
+            <h3><button class="faq__q" aria-expanded="false"><span>Como funcionam a entrega técnica e a instalação?</span><svg class="icon"><use href="#i-chevron-down"/></svg></button></h3>
+            <div class="faq__a"><p>Orientamos os requisitos de infraestrutura civil e elétrica, acompanhamos o nivelamento e a geometria e fazemos a entrega técnica presencial, testando a máquina e usinando a primeira peça de validação.</p></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__q" aria-expanded="false"><span>Quais opções de financiamento estão disponíveis?</span><svg class="icon"><use href="#i-chevron-down"/></svg></button></h3>
+            <div class="faq__a"><p>Auxiliamos no direcionamento para as linhas vigentes, como Finame, Cartão BNDES, leasing e crédito específico para máquinas operatrizes.</p></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__q" aria-expanded="false"><span>O treinamento da equipe está incluso?</span><svg class="icon"><use href="#i-chevron-down"/></svg></button></h3>
+            <div class="faq__a"><p>Esse é um dos nossos diferenciais: além da máquina, garantimos que sua equipe saiba usá-la com segurança e produtividade. Oferecemos treinamento operacional e módulos avançados de programação in-company.</p></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__q" aria-expanded="false"><span>Como pedir uma máquina sob medida ou configuração especial?</span><svg class="icon"><use href="#i-chevron-down"/></svg></button></h3>
+            <div class="faq__a"><p>Envie o tamanho e o peso das peças, o material e as tolerâncias. Analisamos o portfólio e especificamos comando (Fanuc, Siemens, GSK, Heidenhain), cone (BT40, BT50), refrigeração pelo spindle e transportador de cavaco.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section section--dark section--contact" id="contato">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow eyebrow--light">Fale conosco</p>
+            <h2 class="h2">Vamos encontrar a máquina ideal para o <span>seu chão de fábrica?</span></h2>
+          </div>
+          <p class="lead">Atendimento rápido, técnico e transparente. Conte o que você precisa e responderemos direto no WhatsApp.</p>
+        </header>
+
+        <div class="contact">
+          <div class="contact__info">
+            <img class="contact__badge" src="assets/img/brand/contato-cm.jpg" alt="CM Solutions CNC — contatos" loading="lazy" width="738" height="736">
+            <ul class="channels">
+              <li>
+                <a href="tel:+5511958446116">
+                  <span class="channels__icon"><svg class="icon"><use href="#i-phone"/></svg></span>
+                  <span><small>Telefone comercial</small><strong>+55 (11) 95844-6116</strong></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/5511943619085" target="_blank" rel="noopener">
+                  <span class="channels__icon channels__icon--wa"><svg class="icon"><use href="#i-chat"/></svg></span>
+                  <span><small>WhatsApp</small><strong>(11) 94361-9085</strong></span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:prof.carllosmelo@gmail.com">
+                  <span class="channels__icon"><svg class="icon"><use href="#i-mail"/></svg></span>
+                  <span><small>E-mail</small><strong>prof.carllosmelo@gmail.com</strong></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form" id="quoteForm" novalidate>
+            <h3>Solicite uma proposta técnica</h3>
+            <p class="form__lead">Especificações, catálogos e condições comerciais para o seu projeto.</p>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="name">Nome completo *</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Seu nome" required>
+              </div>
+              <div class="field">
+                <label for="company">Empresa / cidade</label>
+                <input type="text" id="company" name="company" autocomplete="organization" placeholder="Ex.: Metalúrgica Silva — SP">
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="phone">WhatsApp com DDD *</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999" required>
+              </div>
+              <div class="field">
+                <label for="interest">Interesse principal *</label>
+                <select id="interest" name="interest" required>
+                  <option value="">Selecione</option>
+                  <option>Compra de máquina CNC / equipamento</option>
+                  <option>Torno convencional mecânico</option>
+                  <option>Consultoria de processos industriais</option>
+                  <option>Mentoria em programação CNC</option>
+                  <option>Treinamento de equipe de usinagem</option>
+                  <option>Outro assunto</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="details">Detalhes da necessidade</label>
+              <textarea id="details" name="details" rows="4" placeholder="Modelo de interesse, tipo de peça, material, curso necessário, prazo…"></textarea>
+            </div>
+
+            <p class="form__error" id="formError" role="alert" hidden></p>
+
+            <button type="submit" class="btn btn--whatsapp btn--lg btn--block">
+              <svg class="icon"><use href="#i-chat"/></svg> Enviar pelo WhatsApp
+            </button>
+            <p class="form__note">Ao enviar, abriremos o WhatsApp com a sua mensagem já preenchida.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#inicio" class="brand" aria-label="CM SOLUTION — início">
+          <img src="assets/img/brand/logo-cm.png" alt="" class="brand__mark" width="42" height="49">
+          <span class="brand__text">
+            <span class="brand__name"><b>CM</b> SOLUTION</span>
+            <span class="brand__sub">Soluções CNC</span>
+          </span>
+        </a>
+        <p>Máquinas CNC, consultoria de processos, programação e capacitação técnica para a indústria metalmecânica brasileira.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Equipamentos">
+        <h4>Equipamentos</h4>
+        <a href="#maquinas" data-line="centros">Centros de usinagem</a>
+        <a href="#maquinas" data-line="tornos-cnc">Tornos CNC</a>
+        <a href="#maquinas" data-line="tornos-conv">Tornos convencionais</a>
+        <a href="#maquinas" data-line="5eixos-portal">5 eixos e portal</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Serviços">
+        <h4>Serviços</h4>
+        <a href="#servicos">Consultoria de processos</a>
+        <a href="#servicos">Programação CNC</a>
+        <a href="#servicos">Treinamentos</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#faq">Dúvidas frequentes</a>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <a href="tel:+5511958446116">+55 (11) 95844-6116</a>
+        <a href="https://wa.me/5511943619085" target="_blank" rel="noopener">WhatsApp (11) 94361-9085</a>
+        <a href="mailto:prof.carllosmelo@gmail.com">prof.carllosmelo@gmail.com</a>
+        <span>Prof. Carlos Melo</span>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> CM SOLUTION. Todos os direitos reservados.</p>
+      <p>Marcas e modelos citados pertencem aos seus respectivos fabricantes.</p>
+    </div>
+  </footer>
+
+  <!-- FICHA TÉCNICA -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__card">
+      <button class="modal__close" id="modalClose" aria-label="Fechar"><svg class="icon icon--lg"><use href="#i-x"/></svg></button>
+      <div class="modal__media"><img id="modalImg" src="" alt=""></div>
+      <div class="modal__info">
+        <p class="eyebrow" id="modalCat"></p>
+        <h3 id="modalTitle"></h3>
+        <p class="modal__tagline" id="modalTagline"></p>
+        <table class="specs"><tbody id="modalSpecs"></tbody></table>
+        <button class="btn btn--primary btn--block" id="modalQuote">Solicitar cotação deste modelo <svg class="icon"><use href="#i-arrow-up-right"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botões flutuantes -->
+  <a href="https://wa.me/5511943619085" target="_blank" rel="noopener" class="fab fab--wa" aria-label="Falar no WhatsApp">
+    <svg class="icon icon--xl"><use href="#i-chat"/></svg>
+  </a>
+  <button class="fab fab--top" id="toTop" aria-label="Voltar ao topo"><svg class="icon icon--lg"><use href="#i-chevron-up"/></svg></button>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
