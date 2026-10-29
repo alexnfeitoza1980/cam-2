@@ -377,6 +377,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
 .field label { display: block; font-size: .8125rem; font-weight: 600; margin-bottom: 6px; color: var(--navy-700); }
 .field input, .field select, .field textarea { width: 100%; min-height: 52px; padding: 12px 14px; border: 1.5px solid var(--line-strong); border-radius: 10px; background: var(--mist); transition: border-color .2s, box-shadow .2s, background .2s; }
 .field input, .field select { height: 52px; }
+.field select:disabled { color: var(--ink-500, #6b7a84); cursor: not-allowed; background: var(--mist); opacity: .75; }
 .field textarea { resize: vertical; min-height: 110px; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--teal-600); background: var(--white); box-shadow: 0 0 0 4px rgba(24, 160, 170, .15); }
 .field.is-invalid input, .field.is-invalid select { border-color: #d6453d; background: #fff6f5; }

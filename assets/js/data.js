@@ -13,9 +13,20 @@ window.CATEGORIES = {
   "5eixos-portal": "5 eixos e portal"
 };
 
+/* Tipo de máquina — usado no formulário de proposta (campo "Tipo de máquina" e "Modelo") */
+window.MACHINE_TYPES = {
+  "torno-conv": "Torno convencional",
+  "torno-cnc": "Torno CNC",
+  "cu-3": "Centro de usinagem 3 eixos",
+  "cu-4": "Centro de usinagem 4 eixos",
+  "cu-5": "Centro de usinagem 5 eixos",
+  "portal": "Centro de usinagem portal"
+};
+
 window.MACHINES = [
   {
     id: "vmx1020",
+    type: "cu-3",
     name: "Centro de Usinagem VMX 1020",
     category: "centros",
     badge: "Mais procurado",
@@ -36,6 +47,7 @@ window.MACHINES = [
   },
   {
     id: "vux400",
+    type: "cu-5",
     name: "Centro de Usinagem 5 Eixos VUX 400",
     category: "5eixos-portal",
     badge: "5 eixos simultâneos",
@@ -56,6 +68,7 @@ window.MACHINES = [
   },
   {
     id: "ftc350",
+    type: "torno-cnc",
     name: "Torno CNC Barramento Inclinado FTC-350",
     category: "tornos-cnc",
     badge: "Alta produtividade",
@@ -76,6 +89,7 @@ window.MACHINES = [
   },
   {
     id: "fl400",
+    type: "torno-cnc",
     name: "Torno CNC Barramento Paralelo FL-400",
     category: "tornos-cnc",
     badge: "Versátil",
@@ -96,6 +110,7 @@ window.MACHINES = [
   },
   {
     id: "ftl500",
+    type: "torno-cnc",
     name: "Torno CNC Pesado FTL-500",
     category: "tornos-cnc",
     badge: "Torneamento pesado",
@@ -115,6 +130,7 @@ window.MACHINES = [
   },
   {
     id: "stl8ii",
+    type: "torno-cnc",
     name: "Torno CNC de Alta Precisão STL-8II",
     category: "tornos-cnc",
     badge: "Alta velocidade",
@@ -135,6 +151,7 @@ window.MACHINES = [
   },
   {
     id: "tc20a",
+    type: "cu-3",
     name: "Centro de Furação e Rosqueamento TC20A",
     category: "centros",
     badge: "Alta dinâmica",
@@ -155,6 +172,7 @@ window.MACHINES = [
   },
   {
     id: "svw",
+    type: "portal",
     name: "Centro de Usinagem Portal SVW",
     category: "5eixos-portal",
     badge: "Linha pesada",
@@ -174,6 +192,7 @@ window.MACHINES = [
   },
   {
     id: "quazar-c6256",
+    type: "torno-conv",
     name: "Torno Mecânico Quazar C6256ZX/2000",
     category: "tornos-conv",
     badge: "Robusto",
@@ -194,6 +213,7 @@ window.MACHINES = [
   },
   {
     id: "quazar-c6240",
+    type: "torno-conv",
     name: "Torno Mecânico Quazar C6240ZK/1000",
     category: "tornos-conv",
     badge: "Oficina",

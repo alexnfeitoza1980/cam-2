@@ -162,9 +162,61 @@
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   }
 
+  /* ---------- Tipo de máquina / modelo no formulário ---------- */
+  const OTHER_MODEL = "__outro";
+
+  function fillModels(type, selected) {
+    const model = $("#machineModel");
+    const list = MACHINES.filter((m) => m.type === type);
+    const placeholder = !type ? "Escolha o tipo primeiro" : "Selecione o modelo";
+
+    model.innerHTML = `<option value="">${placeholder}</option>` +
+      list.map((m) => `<option value="${m.id}">${m.name}</option>`).join("") +
+      (type ? `<option value="${OTHER_MODEL}">Outro modelo / sob consulta</option>` : "");
+    model.disabled = !type;
+    model.value = selected || "";
+    syncOtherModel();
+  }
+
+  function syncOtherModel() {
+    const show = $("#machineModel").value === OTHER_MODEL ||
+      ($("#machineType").value === "outro");
+    $("#modelOtherField").hidden = !show;
+    if (!show) $("#modelOther").value = "";
+  }
+
+  function initMachineFields() {
+    const type = $("#machineType");
+    type.addEventListener("change", () => {
+      // "outro" não tem lista de modelos: só o campo livre
+      if (type.value === "outro") {
+        $("#machineModel").innerHTML = `<option value="">Informe abaixo</option>`;
+        $("#machineModel").disabled = true;
+        syncOtherModel();
+      } else {
+        fillModels(type.value);
+      }
+    });
+    $("#machineModel").addEventListener("change", syncOtherModel);
+
+    // Serviços (consultoria, mentoria…) não precisam de máquina
+    $("#interest").addEventListener("change", syncMachineVisibility);
+    syncMachineVisibility();
+  }
+
+  function syncMachineVisibility() {
+    const isMachine = !/consultoria|mentoria|treinamento|outro assunto/i.test($("#interest").value);
+    $("#machineFields").hidden = !isMachine;
+    if (!isMachine) {
+      $("#machineType").value = "";
+      fillModels("");
+    }
+  }
+
   /* ---------- Cotação: pré-preenche o formulário ---------- */
   function prefillQuote(subject) {
-    const isService = /consultoria|mentoria|treinamento|simulador/i.test(subject);
+    const machine = MACHINES.find((m) => m.name === subject);
+    const isService = !machine && /consultoria|mentoria|treinamento|simulador/i.test(subject);
     const interest = $("#interest");
     const details = $("#details");
     const wanted = isService
@@ -173,9 +225,17 @@
         : "Consultoria de processos industriais")
       : "Compra de máquina CNC / equipamento";
     interest.value = wanted;
-    details.value = isService
-      ? `Olá! Tenho interesse em: ${subject}.`
-      : `Olá! Gostaria de receber proposta e disponibilidade do equipamento: ${subject}.`;
+    syncMachineVisibility();
+
+    if (machine) {
+      $("#machineType").value = machine.type;
+      fillModels(machine.type, machine.id);
+      details.value = "Olá! Gostaria de receber proposta e disponibilidade deste equipamento.";
+    } else {
+      details.value = isService
+        ? `Olá! Tenho interesse em: ${subject}.`
+        : `Olá! Gostaria de receber proposta e disponibilidade do equipamento: ${subject}.`;
+    }
 
     $("#contato").scrollIntoView({ behavior: "smooth" });
     setTimeout(() => $("#name").focus({ preventScroll: true }), 650);
@@ -267,6 +327,14 @@
       }
 
       const v = (id) => $("#" + id).value.trim();
+      const typeSel = $("#machineType");
+      const modelSel = $("#machineModel");
+      const machineHidden = $("#machineFields").hidden;
+      const machineType = machineHidden || !typeSel.value ? "" : typeSel.selectedOptions[0].textContent.trim();
+      const machineModel = machineHidden || !typeSel.value ? ""
+        : (modelSel.value === OTHER_MODEL || typeSel.value === "outro")
+          ? v("modelOther")
+          : modelSel.value ? modelSel.selectedOptions[0].textContent.trim() : "";
       const lines = [
         "*Solicitação de proposta — CM SOLUTION*",
         "",
@@ -274,6 +342,8 @@
         v("company") ? `*Empresa/cidade:* ${v("company")}` : null,
         `*WhatsApp:* ${v("phone")}`,
         `*Interesse:* ${v("interest")}`,
+        machineType ? `*Tipo de máquina:* ${machineType}` : null,
+        machineModel ? `*Modelo:* ${machineModel}` : null,
         v("details") ? `*Detalhes:* ${v("details")}` : null,
         "",
         "_Enviado pelo site da CM SOLUTION_"
@@ -369,6 +439,7 @@
     initActions();
     initSimulator();
     initForm();
+    initMachineFields();
     initFaq();
     initNav();
     initReveal();

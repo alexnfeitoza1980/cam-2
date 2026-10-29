@@ -493,7 +493,6 @@
                 <select id="interest" name="interest" required>
                   <option value="">Selecione</option>
                   <option>Compra de máquina CNC / equipamento</option>
-                  <option>Torno convencional mecânico</option>
                   <option>Consultoria de processos industriais</option>
                   <option>Mentoria em programação CNC</option>
                   <option>Treinamento de equipe de usinagem</option>
@@ -502,9 +501,40 @@
               </div>
             </div>
 
+            <div class="form__row" id="machineFields">
+              <div class="field">
+                <label for="machineType">Tipo de máquina</label>
+                <select id="machineType" name="machineType">
+                  <option value="">Selecione o tipo</option>
+                  <optgroup label="Tornos">
+                    <option value="torno-conv">Torno convencional</option>
+                    <option value="torno-cnc">Torno CNC</option>
+                  </optgroup>
+                  <optgroup label="Centros de usinagem">
+                    <option value="cu-3">Centro de usinagem 3 eixos</option>
+                    <option value="cu-4">Centro de usinagem 4 eixos</option>
+                    <option value="cu-5">Centro de usinagem 5 eixos</option>
+                    <option value="portal">Centro de usinagem portal</option>
+                  </optgroup>
+                  <option value="outro">Outro / ainda não sei</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="machineModel">Modelo</label>
+                <select id="machineModel" name="machineModel" disabled>
+                  <option value="">Escolha o tipo primeiro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field" id="modelOtherField" hidden>
+              <label for="modelOther">Qual modelo ou marca você procura?</label>
+              <input type="text" id="modelOther" name="modelOther" placeholder="Ex.: Romi D 800, Mazak, Haas…">
+            </div>
+
             <div class="field">
               <label for="details">Detalhes da necessidade</label>
-              <textarea id="details" name="details" rows="4" placeholder="Modelo de interesse, tipo de peça, material, curso necessário, prazo…"></textarea>
+              <textarea id="details" name="details" rows="4" placeholder="Tipo de peça, material, curso necessário, prazo…"></textarea>
             </div>
 
             <p class="form__error" id="formError" role="alert" hidden></p>

@@ -22,4 +22,6 @@ _backup_site_antigo/        versão anterior completa (pode apagar quando quiser
 - **Telefone / WhatsApp / e-mail:** `index.html` (buscar pelo número) e `WHATSAPP_NUMBER` em `assets/js/data.js`.
 - **Nova máquina:** copie um bloco em `assets/js/data.js`, ajuste os campos e coloque a foto em `assets/img/machines/`
   (de preferência quadrada, fundo branco, WebP/JPG ~900 px).
+  O campo `type` (ex.: `torno-cnc`, `cu-3`, `cu-5`) define em qual "Tipo de máquina" o modelo aparece no formulário de proposta;
+  os tipos ficam em `MACHINE_TYPES` no mesmo arquivo.
 - **Cores:** variáveis `--orange-*`, `--teal-*` e `--ink-*` no início de `assets/css/style.css`.
