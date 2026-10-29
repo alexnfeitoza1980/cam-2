@@ -43,7 +43,7 @@
 
   // card final: ocupa o espaço que sobra na última linha da grade (3 colunas)
   function ctaTemplate(count) {
-    const span = [3, 1, 2][count % 3];
+    const span = [3, 2, 1][count % 3];
     return `
       <article class="mc mc--cta reveal" style="--span:${span}">
         <img src="assets/img/brand/logo-cm.png" alt="" width="64" height="74">
