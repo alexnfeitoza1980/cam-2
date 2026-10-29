@@ -70,7 +70,7 @@ window.MACHINES = [
       "Placa": "8\" hidráulica",
       "Torre de ferramentas": "12 posições servoacionada",
       "Rotação do spindle": "4.500 RPM",
-      "Comando CNC": "Fanuc 0i-TF / GSK / Syntec",
+      "Comando CNC": "Fanuc 0i-TF / Mitsubishi / Syntec",
       "Aplicação": "Torneamento seriado de alta produção"
     }
   },
@@ -90,7 +90,7 @@ window.MACHINES = [
       "Nariz da árvore": "A2-6",
       "Faixa de rotação": "35 a 2.500 RPM",
       "Torre de ferramentas": "4 ou 6 posições, elétrica",
-      "Comando CNC": "GSK 980 / Fanuc / Siemens",
+      "Comando CNC": "Mitsubishi / Fanuc / Siemens",
       "Aplicação": "Manutenção, eixos longos e lotes pequenos e médios"
     }
   },
