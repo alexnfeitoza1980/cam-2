@@ -30,7 +30,7 @@
         </button>
         <div class="mc__body">
           <p class="mc__cat">${CATEGORIES[m.category]}</p>
-          <h3 class="mc__name">${m.name}</h3>
+          <h3 class="mc__name"><a href="/maquinas/${m.slug}">${m.name}</a></h3>
           <p class="mc__tag">${m.tagline}</p>
           <ul class="mc__chips">${m.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>
           <div class="mc__actions">
@@ -126,6 +126,7 @@
     $("#modalTagline").textContent = m.tagline;
     $("#modalSpecs").innerHTML = Object.entries(m.specs)
       .map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join("");
+    $("#modalPage").href = `/maquinas/${m.slug}`;
     $("#modalQuote").onclick = () => { closeModal(); prefillQuote(m.name); };
 
     const modal = $("#modal");

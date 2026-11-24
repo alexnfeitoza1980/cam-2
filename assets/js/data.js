@@ -1,6 +1,7 @@
 /**
  * CM SOLUTION — catálogo de máquinas
  * Para incluir/alterar um modelo, edite apenas este arquivo.
+ * Cada modelo tem um "slug": é o endereço da página própria (/maquinas/<slug>), gerada por build.mjs.
  * As fotos ficam em assets/img/machines/ (fundo branco, formato WebP).
  */
 
@@ -26,6 +27,7 @@ window.MACHINE_TYPES = {
 window.MACHINES = [
   {
     id: "vmx1020",
+    slug: "centro-de-usinagem-vmx-1020",
     type: "cu-3",
     name: "Centro de Usinagem VMX 1020",
     category: "centros",
@@ -47,6 +49,7 @@ window.MACHINES = [
   },
   {
     id: "vux400",
+    slug: "centro-de-usinagem-5-eixos-vux-400",
     type: "cu-5",
     name: "Centro de Usinagem 5 Eixos VUX 400",
     category: "5eixos-portal",
@@ -68,6 +71,7 @@ window.MACHINES = [
   },
   {
     id: "ftc350",
+    slug: "torno-cnc-barramento-inclinado-ftc-350",
     type: "torno-cnc",
     name: "Torno CNC Barramento Inclinado FTC-350",
     category: "tornos-cnc",
@@ -89,6 +93,7 @@ window.MACHINES = [
   },
   {
     id: "fl400",
+    slug: "torno-cnc-barramento-paralelo-fl-400",
     type: "torno-cnc",
     name: "Torno CNC Barramento Paralelo FL-400",
     category: "tornos-cnc",
@@ -110,6 +115,7 @@ window.MACHINES = [
   },
   {
     id: "ftl500",
+    slug: "torno-cnc-pesado-ftl-500",
     type: "torno-cnc",
     name: "Torno CNC Pesado FTL-500",
     category: "tornos-cnc",
@@ -130,6 +136,7 @@ window.MACHINES = [
   },
   {
     id: "stl8ii",
+    slug: "torno-cnc-alta-precisao-stl-8ii",
     type: "torno-cnc",
     name: "Torno CNC de Alta Precisão STL-8II",
     category: "tornos-cnc",
@@ -151,6 +158,7 @@ window.MACHINES = [
   },
   {
     id: "tc20a",
+    slug: "centro-de-furacao-e-rosqueamento-tc20a",
     type: "cu-3",
     name: "Centro de Furação e Rosqueamento TC20A",
     category: "centros",
@@ -172,6 +180,7 @@ window.MACHINES = [
   },
   {
     id: "svw",
+    slug: "centro-de-usinagem-portal-svw",
     type: "portal",
     name: "Centro de Usinagem Portal SVW",
     category: "5eixos-portal",
@@ -192,6 +201,7 @@ window.MACHINES = [
   },
   {
     id: "quazar-c6256",
+    slug: "torno-mecanico-quazar-c6256zx-2000",
     type: "torno-conv",
     name: "Torno Mecânico Quazar C6256ZX/2000",
     category: "tornos-conv",
@@ -213,6 +223,7 @@ window.MACHINES = [
   },
   {
     id: "quazar-c6240",
+    slug: "torno-mecanico-quazar-c6240zk-1000",
     type: "torno-conv",
     name: "Torno Mecânico Quazar C6240ZK/1000",
     category: "tornos-conv",

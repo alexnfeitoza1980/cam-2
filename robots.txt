@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cam-2-iota.vercel.app/sitemap.xml

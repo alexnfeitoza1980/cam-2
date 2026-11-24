@@ -1,0 +1,89 @@
+/* ==========================================================================
+   CM SOLUTION — páginas individuais das máquinas (/maquinas/<modelo>)
+   Complementa style.css; as páginas são geradas por build.mjs.
+   ========================================================================== */
+
+/* cabeçalho enxuto (sem menu: a página não precisa de JavaScript) */
+.mp-header__actions { display: flex; align-items: center; gap: 22px; }
+.mp-header__back { display: inline-flex; align-items: center; gap: 8px; font-size: .9375rem; font-weight: 600; color: var(--navy-700); }
+.mp-header__back:hover { color: var(--teal-700); }
+
+/* trilha de navegação */
+.crumbs { padding: 22px 0 8px; font-size: .8125rem; color: var(--text-mute); }
+.crumbs ol { display: flex; flex-wrap: wrap; gap: 6px; }
+.crumbs li + li::before { content: "/"; margin-right: 6px; color: var(--line-strong); }
+.crumbs a { color: var(--teal-700); font-weight: 500; }
+.crumbs a:hover { text-decoration: underline; }
+.crumbs [aria-current] { color: var(--text-soft); }
+
+/* topo da página */
+.mp-hero { background: var(--white); padding-bottom: 56px; }
+.mp-hero__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-top: 12px; }
+.mp-hero__media { position: relative; display: grid; place-items: center; aspect-ratio: 1 / 1; padding: 24px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); overflow: hidden; }
+.mp-hero__media img { width: 100%; height: 100%; object-fit: contain; }
+
+.mp-title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: .01em; font-size: clamp(2.25rem, 1.5rem + 3vw, 3.75rem); line-height: 1.02; color: var(--navy-900); margin: 14px 0 16px; }
+.mp-lead { font-size: 1.125rem; color: var(--text-soft); max-width: 52ch; }
+.mp-chips { margin: 20px 0 28px; }
+.mp-chips li { font-size: .8125rem; padding: 6px 12px; }
+.mp-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.mp-note { margin-top: 14px; font-size: .8125rem; color: var(--text-mute); }
+
+/* seções */
+.mp-section { padding: 72px 0; }
+.mp-h2 { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: .01em; font-size: clamp(1.625rem, 1.2rem + 1.6vw, 2.25rem); line-height: 1.1; color: var(--navy-900); margin-bottom: 22px; }
+
+.mp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.mp-specs { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm); }
+.mp-table { margin-bottom: 8px; }
+.mp-table th { text-align: left; font-weight: 400; color: var(--text-mute); padding: 10px 16px 10px 0; width: 42%; border-bottom: 1px solid var(--line); vertical-align: top; }
+.mp-table tr:last-child th, .mp-table tr:last-child td { border-bottom: 0; }
+
+.mp-about p { color: var(--text-soft); margin-bottom: 16px; max-width: 62ch; }
+.mp-about strong { color: var(--navy-900); }
+.mp-ticks { margin: 22px 0 28px; }
+
+/* perguntas frequentes (sem JavaScript: <details>) */
+.mp-faq { display: grid; gap: 12px; }
+.mp-faq details { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
+.mp-faq summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px; font-weight: 600; color: var(--navy-900); cursor: pointer; list-style: none; }
+.mp-faq summary::-webkit-details-marker { display: none; }
+.mp-faq summary .icon { transition: transform .25s; color: var(--teal-700); }
+.mp-faq details[open] summary .icon { transform: rotate(180deg); }
+.mp-faq details[open] { border-color: var(--teal-300); }
+.mp-faq details p { padding: 0 22px 20px; color: var(--text-soft); }
+
+/* outras máquinas */
+.mp-related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.mp-related .mc__name a:hover { color: var(--teal-700); }
+.mp-related .mc__actions { grid-template-columns: 1fr; }
+.mp-related .mc__media { display: block; }
+.mp-all { margin-top: 32px; text-align: center; }
+
+@media (max-width: 1100px) {
+  .mp-related { grid-template-columns: repeat(2, 1fr); }
+  .mp-related .mc:nth-child(3) { display: none; }
+}
+
+@media (max-width: 960px) {
+  .mp-hero__grid, .mp-cols { grid-template-columns: 1fr; gap: 32px; }
+  .mp-hero__media { aspect-ratio: 6 / 5; max-width: 560px; }
+  .mp-section { padding: 56px 0; }
+  .mp-header__back { display: none; }
+}
+
+@media (max-width: 640px) {
+  .mp-hero { padding-bottom: 40px; }
+  .mp-actions .btn { width: 100%; }
+  .mp-specs { padding: 22px 18px; }
+  .mp-table th { width: 46%; }
+  .mp-related { grid-template-columns: 1fr; gap: 18px; }
+  .mp-related .mc:nth-child(3) { display: flex; }
+}
+
+@media (max-width: 640px) {
+  .header__inner { gap: 10px; }
+  .brand__name { white-space: nowrap; font-size: 1.25rem; }
+  .brand__sub { letter-spacing: .2em; }
+  .mp-header__actions .btn { padding: 0 12px; font-size: .8125rem; }
+}

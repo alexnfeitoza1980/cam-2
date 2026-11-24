@@ -536,3 +536,14 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
   .fab--wa { width: 56px; height: 56px; right: 14px; bottom: 14px; }
   .fab--top { right: 18px; bottom: 82px; }
 }
+
+/* 11. LINKS PARA AS PÁGINAS DOS MODELOS (rastreáveis pelo Google) ----------- */
+.mc__name a { color: inherit; transition: color .2s; }
+.mc__name a:hover { color: var(--teal-700); }
+.modal__page { align-self: center; margin-top: 14px; }
+
+.model-links { margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--line); }
+.model-links h3 { font-family: var(--font-display); font-size: 1.125rem; letter-spacing: .1em; text-transform: uppercase; color: var(--navy-900); margin-bottom: 14px; }
+.model-links ul { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+.model-links a { display: inline-block; font-size: .875rem; font-weight: 500; color: var(--navy-700); background: var(--teal-50); border: 1px solid var(--teal-100); padding: 7px 14px; border-radius: 8px; transition: background-color .2s, border-color .2s, color .2s; }
+.model-links a:hover { background: var(--white); border-color: var(--teal-600); color: var(--teal-700); }

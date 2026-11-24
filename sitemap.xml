@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://cam-2-iota.vercel.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cam-2-iota.vercel.app/maquinas/centro-de-usinagem-vmx-1020</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://cam-2-iota.vercel.app/assets/img/machines/vmx1020.webp</image:loc>
+      <image:title>Centro de Usinagem VMX 1020</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cam-2-iota.vercel.app/maquinas/centro-de-usinagem-5-eixos-vux-400</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://cam-2-iota.vercel.app/assets/img/machines/vux400.webp</image:loc>
+      <image:title>Centro de Usinagem 5 Eixos VUX 400</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cam-2-iota.vercel.app/maquinas/torno-cnc-barramento-inclinado-ftc-350</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://cam-2-iota.vercel.app/assets/img/machines/ftc350.webp</image:loc>
+      <image:title>Torno CNC Barramento Inclinado FTC-350</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cam-2-iota.vercel.app/maquinas/torno-cnc-barramento-paralelo-fl-400</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://cam-2-iota.vercel.app/assets/img/machines/fl400.webp</image:loc>
+      <image:title>Torno CNC Barramento Paralelo FL-400</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cam-2-iota.vercel.app/maquinas/torno-cnc-pesado-ftl-500</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://cam-2-iota.vercel.app/assets/img/machines/ftl500.webp</image:loc>
+      <image:title>Torno CNC Pesado FTL-500</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cam-2-iota.vercel.app/maquinas/torno-cnc-alta-precisao-stl-8ii</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://cam-2-iota.vercel.app/assets/img/machines/stl8ii.webp</image:loc>
+      <image:title>Torno CNC de Alta Precisão STL-8II</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cam-2-iota.vercel.app/maquinas/centro-de-furacao-e-rosqueamento-tc20a</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://cam-2-iota.vercel.app/assets/img/machines/tc20a.webp</image:loc>
+      <image:title>Centro de Furação e Rosqueamento TC20A</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cam-2-iota.vercel.app/maquinas/centro-de-usinagem-portal-svw</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://cam-2-iota.vercel.app/assets/img/machines/svw.webp</image:loc>
+      <image:title>Centro de Usinagem Portal SVW</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cam-2-iota.vercel.app/maquinas/torno-mecanico-quazar-c6256zx-2000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://cam-2-iota.vercel.app/assets/img/machines/quazar-c6256.webp</image:loc>
+      <image:title>Torno Mecânico Quazar C6256ZX/2000</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cam-2-iota.vercel.app/maquinas/torno-mecanico-quazar-c6240zk-1000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://cam-2-iota.vercel.app/assets/img/machines/quazar-c6240.webp</image:loc>
+      <image:title>Torno Mecânico Quazar C6240ZK/1000</image:title>
+    </image:image>
+  </url>
+</urlset>
