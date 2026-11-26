@@ -201,7 +201,7 @@ h1, h2, h3, h4 { line-height: 1.1; }
   mask-image: radial-gradient(ellipse at 75% 40%, #000 0%, transparent 70%);
 }
 .hero__grid { position: relative; display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center; }
-.hero__title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: .005em; font-size: clamp(2.6rem, 1.6rem + 4.2vw, 5rem); line-height: 1; margin: 18px 0 22px; color: var(--navy-900); }
+.hero__title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: .005em; font-size: clamp(2.1rem, 1.3rem + 3.3vw, 3.9rem); line-height: 1.02; margin: 18px 0 22px; color: var(--navy-900); }
 .hero__title span { color: var(--teal-700); }
 .hero__lead { color: var(--text-soft); font-size: 1.125rem; max-width: 52ch; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin: 34px 0 30px; }
@@ -547,3 +547,50 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
 .model-links ul { display: flex; flex-wrap: wrap; gap: 8px 10px; }
 .model-links a { display: inline-block; font-size: .875rem; font-weight: 500; color: var(--navy-700); background: var(--teal-50); border: 1px solid var(--teal-100); padding: 7px 14px; border-radius: 8px; transition: background-color .2s, border-color .2s, color .2s; }
 .model-links a:hover { background: var(--white); border-color: var(--teal-600); color: var(--teal-700); }
+
+/* 12. SERVIÇOS EM 4 CARTÕES, AULAS ONLINE, REDES SOCIAIS E ENDEREÇO ------- */
+.services { grid-template-columns: repeat(2, 1fr); }
+.service h3 a { color: inherit; transition: color .2s; }
+.service h3 a:hover { color: var(--teal-700); }
+.service__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: auto; }
+.service__actions .link-btn { margin-top: 0; }
+
+.online { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 32px; padding: 36px 40px; background: var(--navy-900); color: #cfdde4; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.online .eyebrow { color: var(--orange-400); }
+.online h3 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.125rem); text-transform: uppercase; letter-spacing: .01em; color: var(--white); margin: 10px 0 10px; line-height: 1.1; }
+.online__copy p:last-child { max-width: 60ch; }
+.online__actions { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; flex: none; }
+.online .link-btn { color: var(--teal-300); }
+.online .link-btn:hover { border-color: var(--teal-300); }
+
+.hero__more { align-self: center; }
+.text-link { color: var(--teal-700); font-weight: 600; border-bottom: 1.5px solid var(--teal-100); transition: border-color .2s; }
+.text-link:hover { border-color: var(--teal-700); }
+
+.topbar__links .icon { flex: none; }
+.footer__social { display: flex; gap: 10px; margin-top: 18px; }
+.footer__social a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid rgba(255, 255, 255, .18); border-radius: 8px; font-size: .875rem; transition: border-color .2s, color .2s; }
+.footer__social a:hover { border-color: var(--teal-300); color: var(--teal-300); }
+.footer__addr { display: flex; flex-direction: column; gap: 6px; font-style: normal; margin-top: 6px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .12); }
+.footer__addr span { display: flex; align-items: flex-start; gap: 8px; }
+.footer__addr .icon { margin-top: 4px; color: var(--orange-400); width: 15px; height: 15px; }
+
+.quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.quote { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+.quote blockquote p { color: var(--text); font-size: 1.0625rem; }
+.quote figcaption { display: flex; flex-direction: column; margin-top: 18px; font-size: .875rem; color: var(--text-soft); }
+.quote figcaption strong { color: var(--navy-900); }
+
+@media (max-width: 960px) {
+  .services { grid-template-columns: 1fr; }
+  .online { flex-direction: column; align-items: flex-start; padding: 30px 24px; }
+}
+@media (max-width: 640px) {
+  .hero__more { align-self: flex-start; }
+  .service__actions .btn { width: 100%; }
+  .footer__social { flex-wrap: wrap; }
+}
+
+@media (min-width: 961px) {
+  .services .service__media { aspect-ratio: 16 / 8; }
+}

@@ -243,3 +243,8 @@ window.MACHINES = [
     }
   }
 ];
+
+/* Depoimentos e estudos de caso (aparecem na home quando houver itens; rode node build.mjs).
+   Use só relatos reais, com autorização do cliente. Exemplo de item:
+   { quote: "Texto do depoimento.", author: "Nome", role: "Cargo, Empresa — Cidade/UF" } */
+window.TESTIMONIALS = [];

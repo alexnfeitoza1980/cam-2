@@ -37,13 +37,119 @@ const BRAND = {
   email: "prof.carllosmelo@gmail.com",
   ogImage: "/assets/img/brand/og-image.jpg",
   logo: "/assets/img/brand/logo-cm.png",
+  city: "Taubaté",
+  region: "SP",
+  place: "Taubaté - Quiririm, SP",
+  hours: "Segunda a domingo, 24 horas",
+  instagram: "https://www.instagram.com/melo3dcriandosolucoes/",
+  instagramHandle: "@melo3dcriandosolucoes",
+  facebook: "", // cole aqui o endereço da página oficial no Facebook (aparece no topo e no rodapé)
 };
+
+/* ---------- serviços (páginas /<slug>) ---------- */
+const SERVICES = [
+  {
+    slug: "venda-de-centro-de-usinagem-cnc",
+    short: "Venda de máquinas CNC",
+    name: "Venda de Centro de Usinagem CNC e Tornos CNC",
+    eyebrow: "Venda de máquinas",
+    title: "Venda de Centro de Usinagem CNC e Tornos CNC | CM SOLUTION",
+    description: "Venda de centro de usinagem CNC, tornos CNC e tornos mecânicos, com especificação por portfólio de peças e suporte técnico na compra. Base em Taubaté, SP, atendimento em todo o Brasil.",
+    lead: "Tornos CNC, centros de usinagem e tornos mecânicos indicados para o seu portfólio de peças, com suporte técnico especializado em toda a aquisição.",
+    items: [
+      ["Especificações técnicas", "Fichas técnicas completas de cada modelo, com comando CNC, cone, cursos e acessórios definidos para a sua aplicação."],
+      ["Aplicação recomendada por portfólio de peças", "Analisamos as peças, os materiais e as tolerâncias que você usina para indicar o modelo certo."],
+      ["Suporte técnico na aquisição", "Acompanhamento especializado da escolha à entrega técnica, para a máquina chegar e produzir bem."],
+    ],
+    cta: "Solicitar cotação de equipamento",
+    wa: "Olá, Carlos! Gostaria de solicitar uma cotação de equipamento (máquina CNC / centro de usinagem).",
+    img: "assets/img/services/centros-usinagem.webp",
+    imgAlt: "Centro de usinagem CNC usinando uma peça",
+    faq: [
+      ["Qual o preço de um centro de usinagem CNC?", "O valor depende do modelo, do comando CNC, dos acessórios e das condições comerciais. Peça a cotação pelo WhatsApp e enviamos a proposta para a configuração que você precisa."],
+      ["Como escolher o modelo certo?", "Envie o tamanho e o peso das peças, o material e as tolerâncias. Analisamos o seu portfólio e indicamos o modelo mais adequado, inclusive de linhas que não estão no catálogo."],
+      ["A CM SOLUTION atende fora de Taubaté?", "Sim. A base é em Taubaté (Quiririm), SP, mas o atendimento é em todo o Brasil, de forma remota e com visitas técnicas sob agendamento."],
+    ],
+  },
+  {
+    slug: "consultoria-em-usinagem-cnc",
+    short: "Consultoria em usinagem",
+    name: "Consultoria em Usinagem CNC",
+    eyebrow: "Consultoria em usinagem",
+    title: "Consultoria em Usinagem CNC em Taubaté e todo o Brasil | CM SOLUTION",
+    description: "Consultoria em usinagem CNC: análise do portfólio de peças, dimensionamento correto da máquina, redução de setup e eliminação de gargalos. Taubaté (Quiririm), SP, presencial e online.",
+    lead: "Comprar uma máquina sem a consultoria correta gera gargalos e custos desnecessários. A consultoria do Prof. Carlos Melo nasce da vivência real em usinagem e ferramentaria.",
+    items: [
+      ["Análise técnica do portfólio de peças", "Entendemos o que você usina, em que volume e com quais tolerâncias antes de indicar qualquer equipamento."],
+      ["Dimensionamento correto do modelo de máquina", "A máquina na medida da sua necessidade, sem pagar por capacidade que você não vai usar nem sofrer com uma que não dá conta."],
+      ["Redução de setup e eliminação de gargalos", "Diagnóstico no chão de fábrica para encurtar preparações, melhorar o fluxo e liberar horas de máquina."],
+    ],
+    cta: "Agendar diagnóstico técnico",
+    wa: "Olá, Carlos! Gostaria de agendar um diagnóstico técnico para a minha usinagem.",
+    img: "assets/img/services/treinamento-processos.webp",
+    imgAlt: "Medição de peça durante o processo de usinagem",
+    faq: [
+      ["Como funciona o diagnóstico técnico?", "Você conta o que usina e quais são os gargalos. A partir daí combinamos o formato, presencial ou online, e analisamos peças, processos e equipamentos."],
+      ["A consultoria atende em Taubaté e região?", "Sim. A base é em Taubaté (Quiririm), SP, com visitas presenciais sob agendamento. Também atendemos a distância, em todo o Brasil."],
+      ["Preciso comprar uma máquina para contratar a consultoria?", "Não. A consultoria serve tanto para quem vai adquirir um equipamento quanto para quem quer ganhar produtividade com as máquinas que já tem."],
+    ],
+  },
+  {
+    slug: "programacao-cnc-fanuc",
+    short: "Programação CNC Fanuc",
+    name: "Programação CNC e Comando Fanuc",
+    eyebrow: "Programação CNC",
+    title: "Programação CNC Fanuc: desenvolvimento e otimização | CM SOLUTION",
+    description: "Programação CNC com foco em comando Fanuc: desenvolvimento e otimização de programas, melhoria de tempo de ciclo e entrega técnica. Taubaté (Quiririm), SP, presencial e online.",
+    lead: "Desenvolvimento e otimização de programas CNC, com foco especializado em linguagem e comandos Fanuc, melhoria de tempo de ciclo e entrega técnica.",
+    items: [
+      ["Desenvolvimento de programas CNC", "Programas limpos e eficientes para tornos e centros de usinagem, na linguagem do comando da sua máquina."],
+      ["Foco em linguagem e comandos Fanuc", "Experiência especializada em Fanuc. Também atendemos Siemens, Heidenhain e Mitsubishi."],
+      ["Melhoria de tempo de ciclo", "Revisão de programas existentes para reduzir o tempo de ciclo sem comprometer a qualidade da peça."],
+      ["Entrega técnica", "Programa validado na máquina, com a equipe orientada para operar e ajustar."],
+    ],
+    cta: "Consultar suporte em programação",
+    wa: "Olá, Carlos! Gostaria de consultar suporte em programação CNC / comando Fanuc.",
+    img: "assets/img/services/tornos-cnc.webp",
+    imgAlt: "Placa e ferramenta de um torno CNC em operação",
+    faq: [
+      ["Vocês trabalham só com comando Fanuc?", "O foco é Fanuc, mas também atendemos Siemens, Heidenhain e Mitsubishi."],
+      ["Dá para otimizar um programa que já uso?", "Sim. Analisamos o programa atual e trabalhamos para reduzir o tempo de ciclo e melhorar o acabamento."],
+      ["O suporte é presencial ou online?", "Os dois. Atendemos presencialmente a partir de Taubaté (Quiririm), SP, e a distância em todo o Brasil."],
+    ],
+  },
+  {
+    slug: "treinamento-cnc",
+    short: "Treinamento CNC",
+    name: "Treinamento CNC: presencial e online",
+    eyebrow: "Treinamento CNC",
+    title: "Treinamento de Operadores CNC, presencial e online | CM SOLUTION",
+    description: "Treinamento CNC presencial e online: capacitação prática para operadores e programadores, aulas particulares e turmas fechadas para empresas. Taubaté (Quiririm), SP.",
+    lead: "Capacitação prática para operadores e programadores, em aulas particulares ou turmas fechadas para empresas, presencial ou online.",
+    items: [
+      ["Capacitação prática", "Treinamento para operadores e programadores, conduzido por quem conhece a rotina de fábrica."],
+      ["Adaptação à máquina adquirida", "A equipe aprende a usar bem a máquina que acabou de chegar, com segurança e produtividade."],
+      ["Aulas particulares e turmas fechadas", "Aulas individuais ou turmas fechadas para a sua empresa, com o conteúdo ajustado à sua realidade."],
+      ["Presencial e online", "Aulas presenciais e aulas online, de onde você estiver."],
+    ],
+    cta: "Consultar ementa e agenda de aulas",
+    wa: "Olá, Carlos! Gostaria de consultar a ementa e a agenda de aulas de treinamento CNC.",
+    img: "assets/img/services/centros-usinagem.webp",
+    imgAlt: "Spindle de um centro de usinagem usinando uma peça",
+    faq: [
+      ["As aulas online são individuais?", "Há aulas particulares e também turmas fechadas para empresas. Conte o que precisa e indicamos o formato mais adequado."],
+      ["Onde acontecem as aulas presenciais?", "A base é em Taubaté (Quiririm), SP. Para empresas de outras cidades, consulte a possibilidade de treinamento in-company."],
+      ["Como consulto a ementa e a agenda?", "Pelo WhatsApp (11) 94361-9085. Enviamos a ementa e as datas disponíveis."],
+    ],
+  },
+];
 
 /* ---------- dados ---------- */
 const sandbox = { window: {} };
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync(path.join(ROOT, "assets/js/data.js"), "utf8"), sandbox);
 const { MACHINES, CATEGORIES, MACHINE_TYPES } = sandbox.window;
+const TESTIMONIALS = sandbox.window.TESTIMONIALS || [];
 
 const slugs = new Set();
 for (const m of MACHINES) {
@@ -126,6 +232,27 @@ function head({ title, description, canonical, ogImage, ogImageAlt, schema }) {
 </head>`;
 }
 
+const ICON_INSTAGRAM = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>';
+const ICON_FACEBOOK = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>';
+
+/** links das redes sociais; o Facebook só aparece quando BRAND.facebook estiver preenchido */
+const socialLinks = (withLabel) => [
+  BRAND.instagram && `<a href="${BRAND.instagram}" target="_blank" rel="noopener me" aria-label="Instagram ${BRAND.instagramHandle}">${ICON_INSTAGRAM}${withLabel ? " Instagram" : ""}</a>`,
+  BRAND.facebook && `<a href="${BRAND.facebook}" target="_blank" rel="noopener me" aria-label="Facebook da CM SOLUTION">${ICON_FACEBOOK}${withLabel ? " Facebook" : ""}</a>`,
+].filter(Boolean).join("\n        ");
+
+const topbar = () => `<div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__tag">${icon("pin")} ${BRAND.place} · atendimento presencial e online em todo o Brasil</p>
+      <div class="topbar__links">
+        <a href="tel:${BRAND.phoneHref}">${icon("phone")} (11) 95844-6116</a>
+        <a href="https://wa.me/${BRAND.whatsapp}" target="_blank" rel="noopener">${icon("chat")} ${BRAND.whatsappLabel}</a>
+        <a href="mailto:${BRAND.email}" class="topbar__mail">${icon("mail")} ${BRAND.email}</a>
+        ${socialLinks(false)}
+      </div>
+    </div>
+  </div>`;
+
 const brandLink = (label) => `<a href="/" class="brand" aria-label="${label}">
           <img src="/assets/img/brand/logo-cm.png" alt="" class="brand__mark" width="42" height="49">
           <span class="brand__text">
@@ -139,21 +266,22 @@ const footer = () => `<footer class="footer">
       <div class="footer__brand">
         ${brandLink("CM SOLUTION — página inicial")}
         <p>Máquinas CNC, consultoria de processos, programação e capacitação técnica para a indústria metalmecânica brasileira.</p>
+        <div class="footer__social">
+          ${socialLinks(true)}
+        </div>
       </div>
 
       <nav class="footer__col" aria-label="Equipamentos">
         <h4>Equipamentos</h4>
-        <a href="/#maquinas">Centros de usinagem</a>
-        <a href="/#maquinas">Tornos CNC</a>
-        <a href="/#maquinas">Tornos convencionais</a>
-        <a href="/#maquinas">5 eixos e portal</a>
+        <a href="/#maquinas" data-line="centros">Centros de usinagem</a>
+        <a href="/#maquinas" data-line="tornos-cnc">Tornos CNC</a>
+        <a href="/#maquinas" data-line="tornos-conv">Tornos convencionais</a>
+        <a href="/#maquinas" data-line="5eixos-portal">5 eixos e portal</a>
       </nav>
 
       <nav class="footer__col" aria-label="Serviços">
         <h4>Serviços</h4>
-        <a href="/#servicos">Consultoria de processos</a>
-        <a href="/#servicos">Programação CNC</a>
-        <a href="/#servicos">Treinamentos</a>
+        ${SERVICES.map((sv) => `<a href="/${sv.slug}">${esc(sv.short)}</a>`).join("\n        ")}
         <a href="/#faq">Dúvidas frequentes</a>
       </nav>
 
@@ -163,11 +291,16 @@ const footer = () => `<footer class="footer">
         <a href="https://wa.me/${BRAND.whatsapp}" target="_blank" rel="noopener">WhatsApp ${BRAND.whatsappLabel}</a>
         <a href="mailto:${BRAND.email}">${BRAND.email}</a>
         <span>Prof. Carlos Melo</span>
+        <address class="footer__addr">
+          <span>${icon("pin")} ${BRAND.place}</span>
+          <span>Atendimento: ${BRAND.hours}</span>
+          <span>Presencial e online</span>
+        </address>
       </div>
     </div>
 
     <div class="container footer__bottom">
-      <p>© ${new Date().getFullYear()} CM SOLUTION. Todos os direitos reservados.</p>
+      <p>© <span id="year">${new Date().getFullYear()}</span> CM SOLUTION. Todos os direitos reservados.</p>
       <p>Marcas e modelos citados pertencem aos seus respectivos fabricantes.</p>
     </div>
   </footer>`;
@@ -254,16 +387,7 @@ ${head({ title, description, canonical: url, ogImage: abs(BRAND.ogImage), ogImag
 
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <p class="topbar__tag">${icon("pin")} Atendimento em todo o Brasil</p>
-      <div class="topbar__links">
-        <a href="tel:${BRAND.phoneHref}">${icon("phone")} (11) 95844-6116</a>
-        <a href="https://wa.me/${BRAND.whatsapp}" target="_blank" rel="noopener">${icon("chat")} ${BRAND.whatsappLabel}</a>
-        <a href="mailto:${BRAND.email}" class="topbar__mail">${icon("mail")} ${BRAND.email}</a>
-      </div>
-    </div>
-  </div>
+  ${topbar()}
 
   <header class="header is-scrolled">
     <div class="container header__inner">
@@ -371,34 +495,183 @@ ${head({ title, description, canonical: url, ogImage: abs(BRAND.ogImage), ogImag
 `;
 }
 
-/* ---------- blocos injetados no index.html ---------- */
-function seoBlock() {
-  const home = abs("/");
-  const title = "CM SOLUTION | Máquinas CNC, Centros de Usinagem e Consultoria";
-  const description = "CM SOLUTION: tornos CNC, centros de usinagem e tornos mecânicos, com consultoria de processos, programação CNC e treinamento de equipes. Atendimento em todo o Brasil.";
+/* ---------- página de um serviço ---------- */
+function servicePage(sv) {
+  const url = abs("/" + sv.slug);
+  const quoteHref = waLink(sv.wa);
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "Service",
+        "@id": url + "#servico",
+        url,
+        name: sv.name,
+        description: sv.description,
+        serviceType: sv.name,
+        provider: { "@id": abs("/") + "#empresa" },
+        areaServed: [{ "@type": "City", name: BRAND.city }, { "@type": "Country", name: "Brasil" }],
+        inLanguage: "pt-BR",
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": url + "#migalhas",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Início", item: abs("/") },
+          { "@type": "ListItem", position: 2, name: "Serviços", item: abs("/#servicos") },
+          { "@type": "ListItem", position: 3, name: sv.name, item: url },
+        ],
+      },
+    ],
+  };
+  const others = SERVICES.filter((x) => x.slug !== sv.slug);
+  const models = sv.slug === "venda-de-centro-de-usinagem-cnc"
+    ? `
+    <section class="section section--white mp-section">
+      <div class="container">
+        <h2 class="mp-h2">Máquinas do catálogo</h2>
+        ${modelLinksBlock()}
+      </div>
+    </section>` : "";
+
+  return `<!DOCTYPE html>
+<html lang="pt-BR">
+${head({ title: sv.title, description: sv.description, canonical: url, ogImage: abs(BRAND.ogImage), ogImageAlt: `${sv.name} — ${BRAND.name}`, schema })}
+<body>
+
+  ${SPRITE}
+
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  ${topbar()}
+
+  <header class="header is-scrolled">
+    <div class="container header__inner">
+      ${brandLink("CM SOLUTION — página inicial")}
+      <div class="mp-header__actions">
+        <a href="/#servicos" class="mp-header__back">${icon("arrow-left")} Todos os serviços</a>
+        <a href="${quoteHref}" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Falar no WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <section class="mp-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Você está em">
+          <ol>
+            <li><a href="/">Início</a></li>
+            <li><a href="/#servicos">Serviços</a></li>
+            <li aria-current="page">${esc(sv.name)}</li>
+          </ol>
+        </nav>
+
+        <div class="mp-hero__grid">
+          <div class="mp-hero__info">
+            <p class="eyebrow">${esc(sv.eyebrow)}</p>
+            <h1 class="mp-title">${esc(sv.name)}</h1>
+            <p class="mp-lead">${esc(sv.lead)}</p>
+            <div class="mp-actions">
+              <a href="${quoteHref}" target="_blank" rel="noopener" class="btn btn--primary btn--lg">${icon("chat")} ${esc(sv.cta)}</a>
+              <a href="tel:${BRAND.phoneHref}" class="btn btn--ghost btn--lg">${icon("phone")} Ligar agora</a>
+            </div>
+            <p class="mp-note">${BRAND.place} · presencial e online · atendimento: ${BRAND.hours.toLowerCase()}.</p>
+          </div>
+          <div class="mp-hero__media mp-hero__media--photo">
+            <img src="/${sv.img}" alt="${esc(sv.imgAlt)}" width="1200" height="750" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light mp-section">
+      <div class="container">
+        <h2 class="mp-h2">O que está incluído</h2>
+        <div class="mp-items">
+          ${sv.items.map(([t, d]) => `<article class="mp-item"><h3>${esc(t)}</h3><p>${esc(d)}</p></article>`).join("\n          ")}
+        </div>
+        <p class="mp-all"><a href="${quoteHref}" target="_blank" rel="noopener" class="btn btn--whatsapp btn--lg">${icon("chat")} ${esc(sv.cta)}</a></p>
+      </div>
+    </section>${models}
+
+    <section class="section section--white mp-section">
+      <div class="container container--narrow">
+        <h2 class="mp-h2">Dúvidas sobre ${esc(sv.eyebrow.toLowerCase())}</h2>
+        <div class="mp-faq">
+          ${sv.faq.map(([q, a]) => `<details>
+            <summary><span>${esc(q)}</span>${icon("chevron-down")}</summary>
+            <p>${esc(a)}</p>
+          </details>`).join("\n          ")}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light mp-section">
+      <div class="container">
+        <h2 class="mp-h2">Outros serviços</h2>
+        <div class="mp-items">
+          ${others.map((o) => `<article class="mp-item"><h3><a href="/${o.slug}">${esc(o.name)}</a></h3><p>${esc(o.lead)}</p></article>`).join("\n          ")}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  ${footer()}
+
+  <a href="${quoteHref}" target="_blank" rel="noopener" class="fab fab--wa" aria-label="Falar no WhatsApp sobre ${esc(sv.name)}">
+    ${icon("chat", "icon--xl")}
+  </a>
+</body>
+</html>
+`;
+}
+
+/* ---------- blocos injetados no index.html ---------- */
+function seoBlock() {
+  const home = abs("/");
+  const title = "CM SOLUTION | Centro de Usinagem CNC, Consultoria e Treinamento em Taubaté";
+  const description = "Venda de centro de usinagem e tornos CNC, consultoria em usinagem, programação CNC Fanuc e treinamento de operadores, presencial e online. Taubaté (Quiririm), SP, e todo o Brasil.";
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
         "@id": home + "#empresa",
         name: BRAND.name,
+        legalName: "CM Carlos Andre de Melo",
         url: home,
         logo: abs(BRAND.logo),
         image: abs(BRAND.ogImage),
-        description: "Máquinas CNC, consultoria de processos e treinamento em usinagem.",
+        description: "Venda de máquinas CNC e centros de usinagem, consultoria em usinagem, programação CNC Fanuc e treinamento CNC presencial e online.",
         email: BRAND.email,
-        telephone: BRAND.phone,
-        areaServed: "BR",
+        telephone: ["+55 11 94361-9085", BRAND.phone],
+        address: { "@type": "PostalAddress", addressLocality: BRAND.city, addressRegion: BRAND.region, addressCountry: "BR" },
+        areaServed: [{ "@type": "City", name: BRAND.city }, { "@type": "Country", name: "Brasil" }],
+        openingHoursSpecification: [{
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "00:00",
+          closes: "23:59",
+        }],
+        sameAs: [BRAND.instagram, BRAND.facebook].filter(Boolean),
         founder: { "@type": "Person", name: "Carlos Melo", jobTitle: "Professor e consultor de usinagem" },
         contactPoint: [{
           "@type": "ContactPoint",
           contactType: "sales",
-          telephone: BRAND.phone,
+          telephone: "+55 11 94361-9085",
           email: BRAND.email,
           areaServed: "BR",
           availableLanguage: "pt-BR",
         }],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Serviços",
+          itemListElement: SERVICES.map((sv) => ({
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: sv.name, url: abs("/" + sv.slug) },
+          })),
+        },
       },
       {
         "@type": "WebSite",
@@ -410,15 +683,17 @@ function seoBlock() {
       },
     ],
   };
-  return `<link rel="canonical" href="${home}">
+  return `<title>${esc(title)}</title>
+  <meta name="description" content="${esc(description)}">
+  <link rel="canonical" href="${home}">
   <meta name="robots" content="index, follow, max-image-preview:large">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="${BRAND.name}">
   <meta property="og:url" content="${home}">
-  <meta property="og:title" content="CM SOLUTION | Máquinas CNC e engenharia de usinagem">
-  <meta property="og:description" content="Tornos CNC, centros de usinagem, consultoria de processos e treinamento para a sua fábrica.">
+  <meta property="og:title" content="${esc(title)}">
+  <meta property="og:description" content="${esc(description)}">
   <meta property="og:image" content="${abs(BRAND.ogImage)}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -437,6 +712,60 @@ function modelLinksBlock() {
         </nav>`;
 }
 
+/** cartões de serviços + faixa de aulas online (bloco SERVICOS da home) */
+function servicesBlock() {
+  const ICONS = { "venda-de-centro-de-usinagem-cnc": "gauge", "consultoria-em-usinagem-cnc": "settings", "programacao-cnc-fanuc": "code", "treinamento-cnc": "users" };
+  const cards = SERVICES.map((sv) => `<article class="service">
+            <div class="service__media"><img src="/${sv.img}" alt="${esc(sv.imgAlt)}" loading="lazy"></div>
+            <div class="service__body">
+              <span class="service__icon"><svg class="icon icon--lg"><use href="#i-${ICONS[sv.slug]}"/></svg></span>
+              <h3><a href="/${sv.slug}">${esc(sv.name)}</a></h3>
+              <p>${esc(sv.lead)}</p>
+              <ul class="ticks">
+                ${sv.items.slice(0, 3).map(([t]) => `<li>${esc(t)}</li>`).join("\n                ")}
+              </ul>
+              <div class="service__actions">
+                <button class="btn btn--outline btn--sm" data-whatsapp="${esc(sv.wa)}">${esc(sv.cta)}</button>
+                <a class="link-btn" href="/${sv.slug}">Saiba mais <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+              </div>
+            </div>
+          </article>`).join("\n\n          ");
+  const online = SERVICES.find((x) => x.slug === "treinamento-cnc");
+  return `<div class="services">
+          ${cards}
+        </div>
+
+        <div class="online" id="aulas-online">
+          <div class="online__copy">
+            <p class="eyebrow">Aulas online</p>
+            <h3>Aulas particulares e treinamentos CNC na modalidade online</h3>
+            <p>Aprenda programação e operação CNC de onde estiver, em aulas particulares ou em turma fechada para a sua empresa. Também atendemos presencialmente, a partir de ${BRAND.place}.</p>
+          </div>
+          <div class="online__actions">
+            <button class="btn btn--primary btn--lg" data-whatsapp="${esc(online.wa)}">Consultar ementa e agenda <svg class="icon"><use href="#i-arrow-up-right"/></svg></button>
+            <a class="link-btn" href="/${online.slug}">Ver treinamentos CNC <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+          </div>
+        </div>`;
+}
+
+function testimonialsBlock() {
+  if (!TESTIMONIALS.length) return "";
+  return `<section class="section section--light" id="depoimentos">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <p class="eyebrow">Depoimentos</p>
+          <h2 class="h2">Quem já <span>evitou o investimento errado</span></h2>
+        </header>
+        <div class="quotes">
+          ${TESTIMONIALS.map((t) => `<figure class="quote">
+            <blockquote><p>${esc(t.quote)}</p></blockquote>
+            <figcaption><strong>${esc(t.author)}</strong>${t.role ? `<span>${esc(t.role)}</span>` : ""}</figcaption>
+          </figure>`).join("\n          ")}
+        </div>
+      </div>
+    </section>`;
+}
+
 function inject(html, name, content) {
   const re = new RegExp(`(<!-- ${name}:START -->)[\\s\\S]*?(<!-- ${name}:END -->)`);
   if (!re.test(html)) throw new Error(`index.html: marcador ${name} não encontrado`);
@@ -449,15 +778,21 @@ function inject(html, name, content) {
 const outDir = path.join(ROOT, "maquinas");
 fs.rmSync(outDir, { recursive: true, force: true });
 for (const m of MACHINES) write(`maquinas/${m.slug}.html`, machinePage(m));
+for (const sv of SERVICES) write(`${sv.slug}.html`, servicePage(sv));
 
 const indexFile = path.join(ROOT, "index.html");
 let index = fs.readFileSync(indexFile, "utf8");
 index = inject(index, "SEO", seoBlock());
 index = inject(index, "MODELOS", modelLinksBlock());
+index = inject(index, "SERVICOS", servicesBlock());
+index = inject(index, "TOPO", topbar());
+index = inject(index, "RODAPE", footer());
+index = inject(index, "DEPOIMENTOS", testimonialsBlock());
 fs.writeFileSync(indexFile, index, "utf8");
 
 const urls = [
   `  <url>\n    <loc>${abs("/")}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`,
+  ...SERVICES.map((sv) => `  <url>\n    <loc>${abs("/" + sv.slug)}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.9</priority>\n  </url>`),
   ...MACHINES.map((m) =>
     `  <url>\n    <loc>${pageUrl(m)}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n` +
     `    <image:image>\n      <image:loc>${abs(m.image)}</image:loc>\n      <image:title>${esc(m.name)}</image:title>\n    </image:image>\n  </url>`),
@@ -475,4 +810,4 @@ Sitemap: ${abs("/sitemap.xml")}
 `);
 
 console.log(`Site: ${SITE}`);
-console.log(`Geradas ${MACHINES.length} páginas em maquinas/, sitemap.xml, robots.txt e blocos do index.html.`);
+console.log(`Geradas ${MACHINES.length} páginas de máquina, ${SERVICES.length} de serviço, sitemap.xml, robots.txt e blocos do index.html.`);

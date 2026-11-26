@@ -8,6 +8,7 @@ As páginas de cada máquina usam endereços limpos (`/maquinas/<modelo>`), ent�
 ```
 index.html                  página inicial (todas as seções)
 maquinas/                   uma página por máquina (GERADAS por build.mjs — não edite à mão)
+*.html na raiz (exceto index) páginas de serviço, também GERADAS: venda, consultoria, programação Fanuc, treinamento
 sitemap.xml, robots.txt     GERADOS por build.mjs (SEO)
 build.mjs                   gerador das páginas de máquina, sitemap e robots
 vercel.json                 endereços sem .html
@@ -40,6 +41,13 @@ $env:SITE_URL="https://www.seudominio.com.br"; node build.mjs
 (no PowerShell; em outros terminais: `SITE_URL=https://www.seudominio.com.br node build.mjs`)
 
 Isso atualiza canonical, og:image, sitemap e robots.txt de uma vez.
+
+## Textos que dependem do build.mjs
+
+Os textos dos 4 serviços (`SERVICES`), endereço, horário, Instagram e o rodapé/topo ficam em `build.mjs`. Mudou algo lá? Rode `node build.mjs`.
+
+- **Facebook:** preencha `facebook` em `BRAND` (topo de `build.mjs`) com o endereço da página oficial e rode o build; o ícone aparece no topo e no rodapé.
+- **Depoimentos:** adicione relatos reais em `window.TESTIMONIALS` (`assets/js/data.js`) e rode o build; a seção aparece sozinha na home.
 
 ## Como editar
 
